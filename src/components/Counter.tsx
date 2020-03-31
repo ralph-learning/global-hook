@@ -6,19 +6,22 @@ type Props = {
 }
 
 const Counter = ({ name }: Props) => {
-  const [globalState, globalActions]  = useGlobal();
+  const [counterState, counterActions]  = useGlobal(
+    (state: any) => state[name],
+    (actions: any) => actions[name]
+  );
 
   return (
     <div className="Counter">
       <p>
         Counter:
-        {globalState[name]}
+        {counterState}
       </p>
 
-      <button type="button" onClick={globalActions[name].increase}>
+      <button type="button" onClick={counterActions.increase}>
         +1 to global
       </button>
-      <button type="button" onClick={globalActions[name].decrease}>
+      <button type="button" onClick={counterActions.decrease}>
         -1 to global
       </button>
     </div>
