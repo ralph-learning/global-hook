@@ -14,6 +14,7 @@ const reset = (store: any): void => {
   store.setState({ counter: 0 });
 };
 
+
 export default {
   counter: {
     increase,
