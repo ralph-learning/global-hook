@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import useGlobal from '../store/store';
-
-import { GlobalState } from '../store/store';
+import useGlobal, { GlobalState } from '../store/store';
 
 export default function Counter() {
   const [counterState, counterActions]  = useGlobal(
@@ -11,7 +9,7 @@ export default function Counter() {
 
   useEffect(() => {
     counterActions.increase('+1 initial state');
-  }, []);
+  }, [counterActions]);
 
   return (
     <div className="Counter">

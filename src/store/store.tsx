@@ -1,11 +1,7 @@
 import * as React from "react";
 import useGlobalHook from "use-global-hook";
 
-import counterActions from '../components/Counter.actions';
-
-const actions = {
-  ...counterActions,
-};
+import * as actions from '../actions';
 
 export type GlobalState = {
   counter: number,
