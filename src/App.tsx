@@ -1,12 +1,13 @@
 import React from 'react';
 import Counter from './components/Counter';
+import BigPanelCounter from './components/BigPanelCounter';
 
 function App() {
   return (
     <>
-      <Counter name='buttonCounter'/>
-      <Counter name='tabCounter'/>
-      <Counter name='buttonCounter'/>
+      <Counter />
+      <br/>
+      <BigPanelCounter />
     </>
   );
 }

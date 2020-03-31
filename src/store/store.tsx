@@ -1,11 +1,14 @@
 import * as React from "react";
 import useGlobalHook from "use-global-hook";
 
-import actions from '../actions';
+import actions from '../components/Counter.actions';
 
-const initialState = {
-  tabCounter: 0,
-  buttonCounter: 0
+export type GlobalState = {
+  counter: number,
+}
+
+const initialState: GlobalState = {
+  counter: 0
 };
 
 const useGlobal: any = useGlobalHook(React, initialState, actions);
